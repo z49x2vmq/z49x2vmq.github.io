@@ -8,6 +8,6 @@ kramdown:
 future: true
 jailed: false
 gfm_quirks: paragraph_end
-theme: jekyll-theme-minimal
+theme: jekyll-theme-leap-day
 plugins:
   - jekyll-sitemap
