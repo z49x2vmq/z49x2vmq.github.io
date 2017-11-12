@@ -11,3 +11,4 @@ gfm_quirks: paragraph_end
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-sitemap
+highlighter: rouge
