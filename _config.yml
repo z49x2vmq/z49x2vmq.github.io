@@ -8,7 +8,11 @@ kramdown:
 future: true
 jailed: false
 gfm_quirks: paragraph_end
+minima:
+  date_format: "%Y-%m-%d %H:%M %Z"
 theme: minima
+github_username: z49x2vmq
+minima:
+  date_format: "%Y-%m-%d %H:%M %Z"
 plugins:
   - jekyll-sitemap
-highlighter: rouge
