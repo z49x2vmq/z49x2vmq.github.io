@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "STM32L4 RTC Reset 후 몇 millisecond 빠지는 문제"
-date:   2017-11-12 16:16:01 -0900
+date:   2017-11-12 11:16:01 +0900
 categories: STM32 STM32CubeMX RTC
 ---
 
