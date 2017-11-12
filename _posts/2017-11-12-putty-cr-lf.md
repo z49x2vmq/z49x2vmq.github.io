@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Putty로 Serial Port 접속시 \r\n 날리기"
 date:   2017-11-12 23:50:01 +0900
 categories: serial putty

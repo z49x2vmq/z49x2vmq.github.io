@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "AI-Thinker ESP-01 wifi 모듈 저전력 모드"
 date:   2017-11-12 21:50:01 +0900
 categories: wifi esp8266
