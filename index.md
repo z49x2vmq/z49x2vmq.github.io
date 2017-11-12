@@ -42,15 +42,8 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
   {% endfor %}
 {% endfor %}
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
+This is main.c source file.
+<script src="https://gist.github.com/z49x2vmq/a20038d56b5da3d0e4e0ebe11d913171.js?file=main.c"></script>
 
-```c
-def foo
-  puts 'foo'
-end
-```
-<script src="https://gist.github.com/z49x2vmq/2bdbb58ee3bedd34ce37ee632e799df2.js"></script>
+And This is main.h header file.
+<script src="https://gist.github.com/z49x2vmq/a20038d56b5da3d0e4e0ebe11d913171.js?file=main.h"></script>
