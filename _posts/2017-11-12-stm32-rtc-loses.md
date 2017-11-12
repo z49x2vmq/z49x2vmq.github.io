@@ -5,8 +5,6 @@ date:   2017-11-12 11:16:01 +0900
 categories: STM32 STM32CubeMX RTC
 ---
 
-# {{page.title}}
-
 RTC Clock을 LSE로 설정한 경우 Shutdown 상태에서도 RTC를 살려놓고, Auto Wakeup Timer를 이용해서 특정 시간마다 Wakeup 시켜서 필요한 작업을 수행하도록 할 수 있다.
 
 센서에서 수집된 값을 DB에 저장하다보니 MariaDB에서 CURRENT_TIMESTAMP(6)로 수집한 Timestamp가 점점 늘어지는 문제가 발견되서 구글링을 하다보니 이미 같은 문제를 해결한 사례가 있었다.[링크](https://community.st.com/thread/41058-stm32-rtc-loses-one-second-after-each-reset)
