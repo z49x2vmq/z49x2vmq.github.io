@@ -16,3 +16,5 @@ minima:
   date_format: "%Y-%m-%d %H:%M %Z"
 plugins:
   - jekyll-sitemap
+disqus:
+  shortname: z49x2vmq
