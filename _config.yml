@@ -14,5 +14,6 @@ theme: minima
 github_username: z49x2vmq
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
 disqus:
   shortname: z49x2vmq
