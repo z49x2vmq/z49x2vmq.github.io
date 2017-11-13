@@ -1,6 +1,6 @@
 title: RK's Notes
 description: >
-  이것 저것 메모하는 곳
+  메모장
 encoding: UTF-8
 kramdown:
   input: GFM
@@ -12,8 +12,6 @@ minima:
   date_format: "%Y-%m-%d %H:%M %Z"
 theme: minima
 github_username: z49x2vmq
-minima:
-  date_format: "%Y-%m-%d %H:%M %Z"
 plugins:
   - jekyll-sitemap
 disqus:
