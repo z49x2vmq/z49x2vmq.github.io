@@ -2,6 +2,7 @@
 layout: post
 title:  "Putty로 Serial 접속시 <CR><LF> 날리기"
 date:   2017-11-12 23:50:01 +0900
+author: Rae Kim
 categories: serial putty
 ---
 
