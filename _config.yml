@@ -18,3 +18,4 @@ plugins:
   - jekyll-feed
 disqus:
   shortname: z49x2vmq
+timezone: Asia/Seoul
