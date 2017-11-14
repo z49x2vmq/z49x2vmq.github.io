@@ -5,7 +5,7 @@ date:   2017-11-14 22:33:01 +0900
 categories: jekyll
 ---
 
-STM 저가 보드는 기본적으로 st-link가 달려있어서 디버깅 하기가 참 좋다. 처음에 Arduino를 배울까 다른 보드를 배울까 고민 할 때 STM Nucleo 보드를 선택한 이유 중 가장 큰 요인이 디버깅이었다. Arduino는 Serial 출력 기능이 아주 유용하지만 한계가 있다.
+STM 보드는 기본적으로 st-link가 달려있어서 디버깅 하기가 참 좋다.
 
 # STM32 NUCLEO-L432KC 보드 OpenOCD 연결
 ```
