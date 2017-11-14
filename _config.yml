@@ -21,3 +21,4 @@ disqus:
   shortname: z49x2vmq
 timezone: Asia/Seoul
 logo: /assests/wire.jpg
+permalink: /:categories/:year/:month/:day/:title
