@@ -3,6 +3,7 @@ title: RK's Notes
 description: >
   이것저것 여러분야 관심사를 메모하기 위한 블로그. Powered by Jekyll
 encoding: UTF-8
+permalink: pretty
 kramdown:
   input: GFM
   hard_wrap: false
@@ -21,4 +22,3 @@ disqus:
   shortname: z49x2vmq
 timezone: Asia/Seoul
 logo: /assests/wire.jpg
-permalink: pretty
