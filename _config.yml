@@ -30,3 +30,4 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
      author: "Rae Kim"
+     layout: "post"
