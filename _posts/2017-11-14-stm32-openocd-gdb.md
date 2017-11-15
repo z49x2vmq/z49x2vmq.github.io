@@ -3,7 +3,7 @@ layout: post
 title:  "OpenOCD와 gdb를 이용한 stm32 디버깅"
 date:   2017-11-14 22:33:01 +0900
 categories: iot
-tags: gdb openocd stm32 l432kc
+tags: gdb, openocd, stm32, l432kc
 ---
 
 STM 보드는 기본적으로 st-link가 달려있어서 디버깅 하기가 참 좋다.
