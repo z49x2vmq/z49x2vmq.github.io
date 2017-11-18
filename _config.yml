@@ -1,5 +1,5 @@
-author: Rae Kim
-title: RK's Notes
+author: RK
+title: RK Notes
 description: >
   이것저것 여러분야 관심사를 메모하기 위한 블로그. Powered by Jekyll
 encoding: UTF-8
@@ -29,6 +29,6 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
-     author: "Rae Kim"
+     author: "RK"
      layout: "post"
      image: "NA"
