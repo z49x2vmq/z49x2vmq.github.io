@@ -2,7 +2,6 @@
 layout: post
 title: 'Putty로 Serial 접속시 "\r\n" 날리기'
 date:   2017-11-12 23:50:01 +0900
-author: Rae Kim
 categories: serial putty
 image: /assests/wire.jpg
 ---
