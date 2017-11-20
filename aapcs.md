@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AAPCS
-permalink: /aapcs/index.html
+permalink: /aapcs/
 ---
 {% for item in site.aapcs %}
   <h2>{{ item.title }}</h2>
