@@ -4,6 +4,7 @@ title: 'aapcs : Leaf Vs. Non-Leaf Function'
 date:   2017-11-17 23:50:01 +0900
 tags: arm gcc gdb aapcs
 description: Leaf 함수와 Non-Leaf 함수의 호출 방식 차이점
+categories: AAPCS
 --- 
 
 ARM에서는 R14를 LR(Link-Register)라는 특수한 용도로 사용을 한다. 이 LR은 Branch Instruction으로 분기를 할때 Return Address를 담고 있다가 Return을 할때 사용한다. 하지만 더 이상 다른 함수를 호출하지않는 Leaf 함수라면 LR 값을 계속 가지고 있어도 상관 없지만, 다른 함수를 호출하는 함수라면 LR은 어떻게 해야 할까? 당연히 스텍에 Push를 한다.

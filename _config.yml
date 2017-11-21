@@ -35,4 +35,5 @@ defaults:
 collections:
   aapcs:
     output: true
-  
+  tpages:
+    output: true

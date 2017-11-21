@@ -2,7 +2,7 @@
 layout: post
 title:  "AI-Thinker ESP-01 wifi 모듈 저전력 모드"
 date:   2017-11-12 21:50:01 +0900
-categories: wifi esp8266
+tags: wifi esp8266
 ---
 
 5분에 한번씩 센서 값을 DB에 쏴주는 장치를 만들었는데 wifi연결이 필요없는 시간이 더 길어서 전력을 좀 아꼈으면해서 ESP8266의 Deep Sleep 모드에서 전류가 얼마나 흐르나 알아보고 싶었다. Datasheet에 값은 다 나와있지만 그냥 궁금해서 직접 측정을 해봤다.

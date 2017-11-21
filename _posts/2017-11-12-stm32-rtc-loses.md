@@ -2,7 +2,7 @@
 layout: post
 title:  "STM32L4 RTC Reset 후 몇 millisecond 빠지는 문제"
 date:   2017-11-12 11:16:01 +0900
-categories: STM32 STM32CubeMX RTC
+tags: STM32 STM32CubeMX RTC
 ---
 
 RTC Clock을 LSE로 설정한 경우 Shutdown 상태에서도 RTC를 살려놓고, Auto Wakeup Timer를 이용해서 특정 시간마다 Wakeup 시켜서 필요한 작업을 수행하도록 할 수 있다.
