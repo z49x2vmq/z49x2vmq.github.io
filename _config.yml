@@ -12,12 +12,13 @@ jailed: false
 gfm_quirks: paragraph_end
 minima:
   date_format: "%Y-%m-%d %H:%M %Z"
-theme: minima
+theme: jekyll-theme-primer
 github_username: z49x2vmq
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-theme-primer
 disqus:
   shortname: z49x2vmq
 timezone: Asia/Seoul
