@@ -145,5 +145,5 @@ void param_eight(uint8_t one, uint16_t two, uint32_t three, uint32_t four,
   d8:   e28bd000        add     sp, fp, #0
   dc:   e49db004        pop     {fp}            ; (ldr fp, [sp], #4)
   e0:   e12fff1e        bx      lr
-``
+```
 원래 스텍으로 전달된 파라미터들은 이미 스텍에 있으니까 다시 스텍에 넣을 필요가 없다.
