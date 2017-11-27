@@ -8,7 +8,7 @@ STM32 개발 보드를 사용하면 st-link를 이용해서 디버거를 물릴 
 
 먼저 "LDFLAG"에서 기존 "--specs=<...>"을 "--specs=rdimon.specs"로 바꿔주고, "-lnosys"를 지우고 "-lrdimon"을 넣어 준다.
 
-다음으로 `main()`이 정의된 소스 파일에 `extern void initialise_monitor_handle(void);`를 추가하고, `main()` 함수 첫 줄에 `initialise_monitor_handles();`를 호출해준다.
+다음으로 `main()`이 정의된 소스 파일에 `extern void initialise_monitor_handles(void);`를 추가하고, `main()` 함수 첫 줄에 `initialise_monitor_handles();`를 호출해준다.
 
 이렇게 하면 `printf()`의 출력값이 debugger로 전달된다. 주의할 점은, OpenOCD에서 `initialise_monitor_handles()` 함수가 호출되기 전에 "arm semihosting enable"을 해줘야 한다. gdb에서는 "monitor arm semihosting enable"을 하면 된다.
 
@@ -23,11 +23,11 @@ semihosting is enabled
 `printf()`의 출력물이 OpenOCD가 실행 중인 터미널에 아래와 같이 출력된다.
 ```
 ...
-target halted due to debug-request, current mode: Thread                                                                                                                
-xPSR: 0x01000000 pc: 0x08001528 msp: 0x20020000, semihosting                                                                                                            
-Hello, Semihosting.                                                                                                                                                     
-Hello, Semihosting.                                                                                                                                                     
-Hello, Semihosting.                                                                                                                                                     
+target halted due to debug-request, current mode: Thread
+xPSR: 0x01000000 pc: 0x08001528 msp: 0x20020000, semihosting
+Hello, Semihosting.
+Hello, Semihosting.
+Hello, Semihosting.
 Hello, Semihosting.
 ...
 ```
