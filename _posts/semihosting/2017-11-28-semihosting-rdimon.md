@@ -14,8 +14,8 @@ STM32 개발 보드를 사용하면 st-link를 이용해서 디버거를 물릴 
 
 ```
 ...
-(gdb) monitor arm semihosting on          
-semihosting is enabled                    
+(gdb) monitor arm semihosting on
+semihosting is enabled
 (gdb)
 ...
 ```
