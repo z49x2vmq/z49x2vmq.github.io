@@ -4,7 +4,7 @@ title: 'Semihosting으로 printf() 사용하기'
 date:   2017-11-28 06:24 +0900
 tags: stm32 semihosting rdimon
 ---
-STM32 개발 보드를 사용하면 st-link를 이용해서 디버거를 물릴 수 있어서 디버깅하는데 아쉬움은 없지만. 가끔은 그냥 `printf()`를 이용해서 특정 위치에서 특정 값을 출력하는 거시  더 편할 때도 있다. 구글을 찾다 보니 그렇게 Standard Input, Output 등을 Debugger로 넘겨 주는 걸 Semihosting이라고 부르는 것 같다. 그리고 Semihosting을 하는 방법이 잘 설명된 블로그가 있었다. ([출처](#출처))
+STM32 개발 보드를 사용하면 st-link를 이용해서 디버거를 물릴 수 있어서 디버깅하는데 아쉬움은 없지만. 가끔은 그냥 `printf()`를 이용해서 특정 위치에서 특정 값을 출력하는 것이 더 편할 때도 있다. 구글을 찾다 보니 그렇게 Standard Input, Output 등을 Debugger로 넘겨 주는 걸 Semihosting이라고 부르는 것 같다. 그리고 Semihosting을 하는 방법이 잘 설명된 블로그가 있었다. ([출처](#출처))
 
 먼저 "LDFLAG"에서 기존 "--specs=<...>"을 "--specs=rdimon.specs"로 바꿔주고, "-lnosys"를 지우고 "-lrdimon"을 넣어 준다.
 
