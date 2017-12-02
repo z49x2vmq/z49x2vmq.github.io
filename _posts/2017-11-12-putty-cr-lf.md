@@ -11,7 +11,5 @@ UART로 소통하는 모듈은 사용전에 PC에서 터미널 프로그램을 �
 
 Putty에서는 먼저 엔터키를 치면 \<CR>이 날아가고 바로 ctrl+j를 눌러서 \<LF>를 날려주면 된다. 엔터키로 \<CR>을 날릴수도 있지만 ctrl+m을 눌러도 \<CR>이 날아간다.
 
-- CR : Carriage Return
-- LF : Line Feed
-
-옛날 영화에서 타자기 치다가 끝까지 가면 막대기 잡고 다시 앞으로 밀어주는게 CR. 그리고나서 다음 줄로 이동하기 위해 종이를 위로 조금 올려 주는게 LF.
+- CR : Carriage Return(ctrl+m)
+- LF : Line Feed(ctrl+j)
