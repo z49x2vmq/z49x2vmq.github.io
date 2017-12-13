@@ -19,8 +19,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-disqus:
-  shortname: z49x2vmq
+#disqus:
+#  shortname: z49x2vmq
 timezone: Asia/Seoul
 logo: /assests/wire.jpg
 google_analytics: UA-109701028-1
