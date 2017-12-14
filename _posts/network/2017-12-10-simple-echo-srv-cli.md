@@ -313,11 +313,13 @@ tcp        0      0 127.0.0.1:37586         127.0.0.1:7777          TIME_WAIT   
 # TCP State 변화 과정
 TCP State 변화 과정을 간략하게 그려보면 아래와 같다. 더 자세하고 정확한 내용은 Google(TCP State, TCP FSM, etc).
 ## Connection 과정
-![TCP Connection Establishment]({{ "/assets/images/connection.svg" | absolute_url }}){:width="70%" border="1" margin="auto"}
+![TCP Connection Establishment]({{ "/assets/images/connection.svg" | absolute_url }}){:width="70%" border="1" margin="auto"}<br>
+*TCP Connection Establishment 과정*
 
 simple_cli에서 `connect()` 함수를 호출하면 Three-Way Handshake를 한다. SYN과 ACK이 있는데, SYN을 보내면 받는 쪽에서 ACK을 보내준다. SYN을 보냈을 때 ACK이 돌아 오지 않으면 "아 네트워크 어딘가에서 연결이 안되는 구나"라는 걸 알 수 있다. 먼저 simple_cli에서 SYN을 보내면 simple_srv에서 SYN+ACK을 보낸다. simple_srv가 ACK만 보내지 않고 SYN+ACK을 보내는 이유는 ACK만 보낼 경우 내가 보낸 ACK이 진짜 simple_cli까지 도달했는지 알 방법이 없기 때문이다. 그래서 SYN+ACK을 보내고 simple_cli에서 ACK이 돌아온 경우 양방향 통신이 가능하다고 확신 할 수 있다.
 
 ## Close 과정
-![TCP Closing steps]({{ "/assets/images/closing.svg" | absolute_url }}){:width="70%" border="1"}
+![TCP Closing steps]({{ "/assets/images/closing.svg" | absolute_url }}){:width="70%" border="1"}<br>
+*TCP Connection Closing 과정*
 
 그림은 simple_cli가 먼저 close()를 시작한 경우지만 simple_srv가 먼저 했다면 그냥 좌우만 바꾸면 된다. close()가 동시에 시작된 경우는 Google.
