@@ -6,7 +6,7 @@ tags: linux kernel
 ---
 
 
-아래 처럼 현재 커널에서 현재 처리중인 process를 확인 할 수 있다. Breakpoint 조건으로 .pid 값을 설정하면 qemue Guest OS에서 특정 Process의 System Call에서 Break가 걸리게 할 수 있다. 기타 등등 활용 방법은 다양하다.
+아래 처럼 현재 커널에서 현재 처리중인 process를 확인 할 수 있다. Breakpoint 조건으로 .pid 값을 설정하면 qemu Guest OS에서 특정 Process의 System Call에서 Break가 걸리게 할 수 있다. 기타 등등 활용 방법은 다양하다.
 
 ```
 (gdb) print **(struct task_struct**)((uint64_t)__per_cpu_offset[$_thread-1] + (uint64_t)&current_task)
