@@ -17,7 +17,7 @@ But still, I wanted to attach debugger like one can do to user land application.
 # QEMU GDB Option
 Enabling gdb stub can be easily done by appending `-s` option to "qemu" command. For instance:
 ```
-qemu-system-x86_64 ... -s
+bash$ qemu-system-x86_64 ... -s
 ```
 
 `-s` option opens tcp port 1234 for gdb connection. From the host machine one can attach to the guest VM with gdb command, "target remote :1234".
