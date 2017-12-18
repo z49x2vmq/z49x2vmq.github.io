@@ -35,4 +35,4 @@ Actually, `-s` option is a shorcut to more general option, `-gdb tcp::1234`. If 
 Just attaching the gdb to the guest VM doesn't get you anywhere. You need to set a breakpoint at the code you want to examine and trigger the execution of that code in the guest VM.
 
 # ddd
-If you have knowledge about struct types used in the kernel gdb will be just fine. I don't have such a knowledge and I find data display feature of "ddd" very useful to studying various data types in the kernel.
+If you have knowledge about struct types used in the kernel gdb will be just fine. I don't have such a knowledge and I find data display feature of "ddd" very useful for studying various data types in the kernel.
