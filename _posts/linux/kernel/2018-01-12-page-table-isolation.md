@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  'Meltdown 때문에 변경된 것'
+title:  'Linux와 Meltdown'
 date:   2018-01-12 06:50 +0900
 tags: linux kernel meltdown security
 ---
