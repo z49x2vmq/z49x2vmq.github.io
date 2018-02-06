@@ -20,3 +20,6 @@ if has("clipboard")
 	set clipboard^=unnamed,unnamedplus
 endif
 ```
+
+* unnamed : `*` register 사용
+* unnamedplus : `+` register 사용
