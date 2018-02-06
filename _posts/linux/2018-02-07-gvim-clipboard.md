@@ -13,7 +13,7 @@ tags: gvim
 # unnamed register를 시스템 클립보드와 연동
 vim에서 틀별히 어떤 register를 사용할지 정하지 않고 delete, yank, put을 하면 unnamed register(`"`)가 사용된다. 
 
-아래와 같은 옵션을 사용하면 delete, yank, put이 기본을 `+`, `*`을 사용하도록 바꿀수 있다.
+아래와 같은 옵션을 사용하면 delete, yank, put이 기본으로 `+`, `*` register를 사용하도록 바꿀수 있다.
 
 ```
 if has("clipboard")
