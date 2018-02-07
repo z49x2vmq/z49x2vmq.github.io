@@ -3,7 +3,7 @@ title: RK's Notes
 description: >
   Notes about things I'm interested in.
 encoding: UTF-8
-permalink: pretty
+permalink: /:year/:month/:day/:title/
 exclude: ["google49412ec2098884ad.html"]
 kramdown:
   input: GFM
