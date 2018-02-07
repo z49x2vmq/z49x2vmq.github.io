@@ -2,7 +2,15 @@
 layout: post
 title:  'OpenOCD로 여러보드 동시에 Debugging 하기'
 date:   2017-11-29 06:50 +0900
+category: openocd
 tags: stm32 openocd gdb
+---
+
+---
+# 관련 포스트
+{% for post in site.categories.openocd %} 
++ [{{ post.title }}]({{ post.url }}) {% endfor %}
+
 ---
 
 보드 여러 개를 동시에 디버깅하려면 openOCD도 그만큼 실행을 해줘야 하는데 옵션을 안 주고 실행을 하면 어떤 보드에 붙었는지 잘 알 수가 없다.
