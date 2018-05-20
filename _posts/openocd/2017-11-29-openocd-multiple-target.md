@@ -43,3 +43,72 @@ $ openocd -f <...> -c "hla_serial XXXXXXXXXXXXXXXXXXXXXXX"
 $ openocd -f <...>  -c "hla_serial XXXXXXXXXXXXXXXXXXXXXXX; gdb_port 3334; tcl_port 3335; telnet_port 3336"
 $ openocd -f <...>  -c "hla_serial YYYYYYYYYYYYYYYYYYYYYYY; gdb_port 4334; tcl_port 4335; telnet_port 4336"
 ```
+
+# Bash script
+```shell
+#!/bin/bash
+# vim: ts=4:sw=4:expandtab
+
+usage() {
+    echo "Usage: $0 -f <openocd_script> [-s <board_serial> | -u <usbbus:devnum>] -p <port_prefix>"
+
+    exit 1
+}
+
+while getopts ":f:s:u:p:" opt; do
+    case ${opt} in
+    f)
+        SCRIPT=$OPTARG
+        ;;
+    s)
+        SERIAL=$OPTARG
+        ;;
+    u)
+        USBDEV=$OPTARG
+        ;;
+    p)
+        PORTPREFIX=$OPTARG
+        ;;
+    :)  
+        echo "Invalid Option"
+        usage
+        ;;
+    esac
+done
+
+if [ -z "$SERIAL" ]; then
+    if [ -z "$USBDEV" ]; then
+        echo "Both -s and -u are not specified"
+        exit 1
+    fi
+
+    SERIAL=$(lsusb -s $USBDEV -v 2> /dev/null | grep iSerial | awk '{print $3}')
+fi
+
+if [ -n "$PORTPREFIX" ]; then
+    re='^[0-9]+$'
+    if ! [[ $PORTPREFIX =~ $re ]] ; then
+        echo "Port prefix is not a number"
+        usage
+    fi
+
+    GDBPORT=${PORTPREFIX}3
+    TELPORT=${PORTPREFIX}4
+    TCLPORT=${PORTPREFIX}6
+elif [ -z "$PORTPREFIX" ]; then
+    echo "Port prefix is not given"
+    usage
+fi
+
+if [ -z "$SCRIPT" ]; then
+    echo "Script is not given"
+    usage
+fi
+
+#echo $SCRIPT
+#echo $SERIAL
+#echo $USBDEV
+#echo $PORTPREFIX
+
+openocd -f $SCRIPT  -c "hla_serial $SERIAL; gdb_port $GDBPORT; tcl_port $TCLPORT; telnet_port $TELPORT"
+```
