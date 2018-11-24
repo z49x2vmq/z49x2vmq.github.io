@@ -5,11 +5,16 @@ date:   2018-09-25 06:50 +0900
 tags: linux dd 
 ---
 
-An I/O intensive applications, such as, DBMS can suffer from slow I/O performance. But unfortunately, it is not always clear that the root cause of the bad performance really lies in I/O layer. 
+An I/O intensive application, such as DBMS, can suffer from slow I/O
+performance. But unfortunately, it is not always clear that the root cause of
+the bad performance is in I/O layer. 
 
-With `dd` command it is really easy to test I/O performance of a filesystem.
+With `dd` command it is really easy to test I/O performance of a file system.
+With `dd` you can only perform sequential I/O, but for most of time this will
+be sufficient.
 
-For write test you can run below `dd` command in any directory of filesystem with I/O performance problem. (For instance, data directory of DBMS)
+For write performance test you can execute `dd` command as below within any
+directory of file system with I/O performance problem.
 
 ```
 dd if=/dev/zero of=test bs=1024 count=10240
@@ -27,15 +32,32 @@ dd if=test of=/dev/zero bs=1024 count=10240
 10485760 bytes (10 MB, 10 MiB) copied, 0.0170566 s, 615 MB/s
 ```
 
-# Direct I/O
-According to the result above, everything seems fine(251 MB/s for write, 615 MB/s for read). But your application or database might still be suffering from slow I/O performance.
+I/O throughput of 251 MB/s write and 615 MB/s read doesn't look so bad, does
+it? 
 
-It's because above test is not a fair disk I/O test because most of the I/O was done in the filesystem cache in the memory.
+## Buffered I/O
 
-For the I/O performance test we want to measure the time the entire contents are actually written on to the disk.
+According to the results from above, everything seems fine(251 MB/s for write,
+615 MB/s for read). But your application's log file or performance statistics
+data might still complaining I/O performance.
 
-With `direct` flag for `dd` command it will bypass the cache and read/write directly from/to the disk.
+Why do we get this? This is because above test is not a fair disk I/O test
+because most of the I/O was done in the file system buffer(or cache) in memory.
 
+When you complain I/O performance to system administrator, it is not very
+uncommon to get this kind of result back from them.
+
+## Direct I/O
+
+As oppose to buffered I/O, direct I/O bypasses file system buffer. If your
+application decide to maintain its own file buffer, OS file system buffer can
+be disabled and save some memory. And for this type of application, measuring
+buffered I/O performance is meaningless.
+
+## Direct I/O with "dd"
+
+With `direct` flag you can tell `dd` to perform a direct I/O. This way, we can
+check pure disk performance.
 
 ```
 # Write test with direct flag
@@ -52,6 +74,3 @@ dd if=test of=/dev/zero bs=1024 count=10240 iflag=direct
 ```
 
 Now the I/O performance bottleneck looks very clear.
-
-# Note
-If block size is not specified or is set to wrong value, the result will be very poor. It is important to set the `bs` to some multiple of physical block size.
